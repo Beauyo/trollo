@@ -1,12 +1,15 @@
 <br><br><br><br><br><br>
 <div class="ui segments" style="margin-top: 70px;">
 <div class="ui segment">
+<%= link_to "Delete Task", list_path %>
+<hr />
+<%= link_to "Edit Task", edit_list_task_path %>
     <h1><%= @task.name %></h1>
-    <h3><%= @task.body %></h3>
+    <br />
+    <h2><%= @task.body %></h2>
     <div class="ui toggle checkbox">
         <input type="checkbox" name="public">
         <label>Click to Complete</label>
-        <!-- Write a function for changing the label to completed or not -->
         <br>
     </div>
     <br>
