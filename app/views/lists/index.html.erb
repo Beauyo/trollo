@@ -1,4 +1,10 @@
-<h1>List Of Things To Do</h1>
+<h1>Lists</h1>
+<%= link_to "Add a list", new_board_list_path(@list), class: "ui button blue" %>
+<hr />
 <ul>
-
+   <% @lists.each do |list| %>
+     <li>
+     <%= link_to list.name, list %>
+     </li>
+     <% end %>
 </ul>

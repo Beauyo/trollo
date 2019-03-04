@@ -1,2 +1,15 @@
-<h1>Tasks#show</h1>
-<p>Find me in app/views/tasks/show.html.erb</p>
+<br><br><br><br><br><br>
+<div class="ui segments" style="margin-top: 70px;">
+<div class="ui segment">
+    <h1><%= @task.name %></h1>
+    <h3><%= @task.body %></h3>
+    <div class="ui toggle checkbox">
+        <input type="checkbox" name="public">
+        <label>Click to Complete</label>
+        <!-- Write a function for changing the label to completed or not -->
+        <br>
+    </div>
+    <br>
+    <%= link_to 'Back', :back, class: "ui secondary button inverted" %>
+</div>
+</div>

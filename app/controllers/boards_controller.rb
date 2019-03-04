@@ -39,12 +39,12 @@ class BoardsController < ApplicationController
   end
 
   private
-  def set_board
-    @board = Board.find(params[:id])
-  end
+    def set_board
+      @board = Board.find(params[:id])
+    end
 
-  def board_params
-    params.require(:board).permit(:name)
-  end
+    def board_params
+     params.require(:board).permit(:name)
+    end
 
 end
