@@ -2,7 +2,7 @@ class TasksController < ApplicationController
   before_action :set_lists
   before_action :set_tasks, only: [:show, :edit, :update, :destroy]
   def index
-    @tasks = Lists.task.all
+    @tasks = Task.all
   end
 
   def show
@@ -42,7 +42,7 @@ class TasksController < ApplicationController
   
   private
   def task_params
-    params.require(:task).permit(:name)
+    params.require(:task).permit(:name, :body)
   end
 
   def set_tasks
